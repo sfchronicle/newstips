@@ -1,52 +1,178 @@
-body{
-  margin-top:20px;
-  font-family: "Times New Roman", Georgia, Times, serif;
-  font-size:21px;
-  background-color: #f9f9f9;
+@font-face {
+  font-family: 'Tiempos Regular';
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Tiempos Regular'), url("https://www.sfchronicle.com/css/core/fonts/tiempos/TiemposTextWeb-Regular.woff2") format('woff2'), url("https://www.sfchronicle.com/css/core/fonts/tiempos/TiemposTextWeb-Regular.woff") format('woff');
 }
-h1{
-  font-family: "HelveticaNeue", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 31px;
-  margin-top: 40px;
+@font-face {
+  font-family: 'Tiempos Regular Italic';
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Tiempos Regular'), url("https://www.sfchronicle.com/css/core/fonts/tiempos/TiemposTextWeb-RegularItalic.woff2") format('woff2'), url("https://www.sfchronicle.com/css/core/fonts/tiempos/TiemposTextWeb-RegularItalic.woff") format('woff');
 }
-h2{
-  font-family: "HelveticaNeue", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#333;
-  padding-top: 10px;
-  margin-bottom: 10px;
+@font-face {
+  font-family: 'Tiempos Bold';
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Tiempos Bold'), url("https://www.sfchronicle.com/css/core/fonts/tiempos/TiemposTextWeb-Bold.woff2") format('woff2'), url("https://www.sfchronicle.com/css/core/fonts/tiempos/TiemposTextWeb-Bold.woff") format('woff');
 }
-p{
-  margin:0 auto 20px;
-  text-align:left;
+@font-face {
+  font-family: 'Tiempos Bold Italic';
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Tiempos Bold'), url("Tiempos Text Bold Italic: https://www.sfchronicle.com/css/core/fonts/tiempos/TiemposTextWeb-BoldItalic.woff2") format('woff2'), url("https://www.sfchronicle.com/css/core/fonts/tiempos/TiemposTextWeb-BoldItalic.woff") format('woff');
 }
-a{
-  color:#C12020;
-  text-decoration:none;
+@font-face {
+  font-family: 'Tiempos Headline Light';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Tiempos Headline Light'), url("https://www.sfchronicle.com/css/core/fonts/tiempos/TiemposHeadlineWeb-Light.woff2") format('woff2'), url("https://www.sfchronicle.com/css/core/fonts/tiempos/TiemposHeadlineWeb-Light.woff") format('woff');
 }
-a:hover{
-  text-decoration:underline;
+@font-face {
+  font-family: 'Tiempos Headline Black';
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Tiempos Headline Black"),url("https://www.sfchronicle.com/css/core/fonts/tiempos/TiemposHeadlineWeb-Black.woff2") format("woff2"), url("https://www.sfchronicle.com/css/core/fonts/tiempos/TiemposHeadlineWeb-Black.woff") format("woff");
 }
-img{
+
+:root {
+  --brand-color: #2CB9BF;
+  --primary-color: #388EF4; 
+  --text-color: #222222;
+}
+
+html {
+  font-size: 100%;
+}
+
+*::after:focus:not(:focus-visible),
+*::before:focus:not(:focus-visible),
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: geometricPrecision;
+  font-variant-ligatures: normal;
+  font-kerning: normal;
+  line-height: 1.5;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+img {
+  max-width: 100%;
+  display: block;
   width: 100%;
 }
-.sf_logo{
+
+body {
+  font-family: "Tiempos Regular", serif;
+  color: var(--text-color);
+}
+
+h1 {
+  font-family: "Tiempos Headline Black", serif;
+  line-height: 1.2;
+  margin-top: 1.44em;
+}
+
+h2 {
+  font-family: "Tiempos Headline Light", serif;
+  margin-top: 1.2em;
+  line-height: 1.2;
+  @media (min-width: 480px){
+    
+  }
+}
+
+p {
+  margin: .833em auto 0 auto;
+  text-align: left;
+}
+
+.italic {
+  font-family: "Tiempos Regular Italic", serif;
+}
+
+a {
+  color: #444;
+  text-decoration-color: var(--brand-color);
+  font-family: "Tiempos Bold Italic", serif;
+}
+
+a:hover {
+  color: var(--brand-color)
+}
+
+.sf_logo {
   max-width:200px;
-  margin:0 auto;
+  margin: 0em auto;
 }
-.container{
-  max-width:800px;
-  margin:0 auto;
+
+ul {
+  padding: 0;
 }
-.right{
-  float:right;
-  margin:0 0 10px 10px;
-  padding:20px;
-  background:#fff;
+
+article {
+  max-width: 70ch;
+  margin: 1em auto;
+  padding: 0 12px;
 }
-.right p{
-  margin-bottom:0;
+
+.contact {
+  text-align: center;
+  background: #FCFCFC;
+  padding: 12px;
+  margin: .8em auto;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+              0 2px 2px rgba(0,0,0,0.11), 
+              0 4px 4px rgba(0,0,0,0.11), 
+              0 6px 8px rgba(0,0,0,0.11),
+              0 8px 16px rgba(0,0,0,0.11);
 }
-.right ul{
-  margin-top: 10px;
-  padding-left:20px;
+
+.contact p {
+  text-align: center;
+}
+
+.contact ul {
+  list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
+  padding-left: 0;
+}
+
+@media (min-width: 480px){
+  h1{font-size:2.488em;}
+  h2{font-size:1.728em;}
+  p{font-size:1.2em;}
+  ul{font-size:1.2em;}
+}
+
+@media (min-width: 1920px){
+  h1{font-size:2.986em;}
+  h2{font-size:2.074em;}
+  p{font-size:1.44em;}
+  ul{font-size:1.44em;}
 }
