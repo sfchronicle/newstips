@@ -101,16 +101,24 @@ h1 {
 
 h2 {
   font-family: "Tiempos Headline Light", serif;
-  margin-top: 1.2em;
   line-height: 1.2;
-  @media (min-width: 480px){
-    
-  }
+  margin-top: 1.2em;
+}
+
+.highlight {
+  border: 2px solid var(--brand-color);
+  padding: 12px;
 }
 
 p {
   margin: .833em auto 0 auto;
   text-align: left;
+}
+
+.caps {
+  text-transform: uppercase;
+  max-width: 30ch;
+  letter-spacing: .05em;
 }
 
 .italic {
@@ -147,11 +155,7 @@ article {
   background: #FCFCFC;
   padding: 12px;
   margin: .8em auto;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
-              0 2px 2px rgba(0,0,0,0.11), 
-              0 4px 4px rgba(0,0,0,0.11), 
-              0 6px 8px rgba(0,0,0,0.11),
-              0 8px 16px rgba(0,0,0,0.11);
+  border: 2px solid var(--brand-color);
 }
 
 .contact p {
@@ -160,6 +164,10 @@ article {
 
 .contact ul {
   list-style: none;
+}
+
+hr {
+  color: var(--brand-color);
 }
 
 @media (min-width: 480px){
